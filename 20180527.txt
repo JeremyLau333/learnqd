@@ -9,3 +9,66 @@ git remote -v
 git remote rm origin
 git remote add github git@github.com:michaelliao/learngit.git
 git remote add gitee git@gitee.com:liaoxuefeng/learngit.git
+创建文件20180527.txt
+git add 20180527.txt
+git commit -m "20180527 personal diary"
+提交失败，说不知道我是谁，让我配置一下，那我就配置一下吧
+--------------------------------------------------------------------------------------------
+
+$ git commit -m"20180527 personal diary"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'louisli1991@lilu.(none)')
+--------------------------------------------------------------------------------------------
+
+如下图的配置
+louisli1991@lilu MINGW64 ~/learnqd (dev)
+$ git config --global user.email "944182736@qq.com"
+
+louisli1991@lilu MINGW64 ~/learnqd (dev)
+$ git config --global user.name "JeremyLau333"
+
+louisli1991@lilu MINGW64 ~/learnqd (dev)
+$ git commit -m"20180527 personal diary"
+[dev 1aa1e83] 20180527 personal diary
+ 1 file changed, 11 insertions(+)
+ create mode 100644 20180527.txt
+
+louisli1991@lilu MINGW64 ~/learnqd (dev)
+$ git push github dev
+Warning: Permanently added the RSA host key for IP address '13.229.188.59' to th         e list of known hosts.
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 666 bytes | 222.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:JeremyLau333/learnqd.git
+   fe93fac..1aa1e83  dev -> dev
+
+louisli1991@lilu MINGW64 ~/learnqd (dev)
+$ git push gitee dev
+The authenticity of host 'gitee.com (116.211.167.14)' can't be established.
+ECDSA key fingerprint is SHA256:FQGC9Kn/eye1W8icdBgrQp+KkGYoFgbVr17bmjey0Wc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'gitee.com,116.211.167.14' (ECDSA) to the list of kno         wn hosts.
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 666 bytes | 333.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Powered by Gitee.com
+To gitee.com:JeremyLau333/learnqd.git
+   fe93fac..1aa1e83  dev -> dev
+
+   
+   
