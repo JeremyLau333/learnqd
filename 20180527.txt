@@ -1,0 +1,11 @@
+很困很困，但是还是用了一下git
+其实很简单，首先下载git,然后安装好，利用命令生成公钥，将公钥添加到github和gitee里面，
+利用克隆的命令克隆远程的项目，然后做了一下个性化的配置，配置好，用于两个代码托管平台的推送
+用的命令如下：
+ssh-keygen -t rsa -C "youremail@example.com"
+git clone git@github.com:michaelliao/gitskills.git
+git remote add origin git@gitee.com:liaoxuefeng/learngit.git
+git remote -v
+git remote rm origin
+git remote add github git@github.com:michaelliao/learngit.git
+git remote add gitee git@gitee.com:liaoxuefeng/learngit.git
